@@ -27,3 +27,18 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+@font-face {
+  font-family: 'Eternal';
+  src: url('./eternal.ttf');
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('./JosefinSans-VariableFont_wght.ttf');
+}
+
+body {
+  background-image: url('./guild-interior-md.jpg');
+  background-size: cover;
+}
