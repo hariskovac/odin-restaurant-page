@@ -28,6 +28,11 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+:root {
+  --color-red: rgba(220, 20, 60, 0.9);
+  --color-red-hover: rgb(219, 23, 62);
+}
+
 @font-face {
   font-family: 'Eternal';
   src: url('./eternal.ttf');
@@ -41,4 +46,78 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   background-image: url('./guild-interior-md.jpg');
   background-size: cover;
+}
+
+#content {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid black;
+  background-color: var(--color-red);
+  color: white;
+  font-family: 'Eternal', Helvetica, sans-serif;
+}
+
+.header > h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-left: 30px;
+  font-size: 3.3rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  width: 1100px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.80);
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Josefin', Helvetica, sans-serif;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 50px;
+  align-self: center;
+  backdrop-filter: blur(1px);
+}
+
+.button {
+  width: 30%;
+  background-color: var(--color-red);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Eternal', Helvetica, sans-serif;
+  font-size: 3rem;
+}
+
+.button:hover {
+  background-color: var(--color-red-hover);
+  text-decoration: underline;
+}
+
+footer {
+  color: white;
+  text-align: center;
 }
