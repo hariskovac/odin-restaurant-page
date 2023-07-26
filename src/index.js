@@ -1,6 +1,4 @@
 import './style.css';
-import  { loadHome } from './home';
+import  { loadPage } from './website';
 
-const contentDiv = document.querySelector('#content');
-
-contentDiv.appendChild(loadHome());
+loadPage();
