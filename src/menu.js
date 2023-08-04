@@ -27,7 +27,7 @@ const menuItems = [
     name: 'Seafood Bouillabaisse',
     price: '2 SP',
     description: 'Fresh-caught haddock, mussels, and clams slowly simmered in a flavorful broth of fish and tomato stock, leeks, chopped garlic, red pepper flakes, and saffron. You\'ll wish you had a ladle for this one.',
-    image: '../src/seafood buillabaisse.png',
+    image: '../src/seafood bouillabaisse.png',
   },
   {
     name: 'Apple Blackberry Pie',
@@ -38,5 +38,47 @@ const menuItems = [
 ]
 
 function loadMenu() {
+  const menuDiv = document.createElement('div');
+  menuDiv.classList.add('menu-container');
+
   
+  menuItems.forEach((item) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('item-container');
+
+    const image = document.createElement('img');
+    image.classList.add('item-img');
+    image.src = item.image;
+
+    itemDiv.appendChild(image);
+
+    const itemText = document.createElement('div');
+    itemText.classList.add('item-text');
+
+    const itemNameDiv = document.createElement('div');
+    itemNameDiv.classList.add('item-name');
+
+    const itemName = document.createElement('h3'); 
+    itemName.textContent = item.name;
+
+    const itemPrice = document.createElement('h3');
+    itemPrice.textContent = item.price;
+
+    itemNameDiv.appendChild(itemName);
+    itemNameDiv.appendChild(itemPrice);
+
+    itemText.appendChild(itemNameDiv);
+    itemDiv.appendChild(itemText);
+
+    const itemDescription = document.createElement('p');
+    itemDescription.textContent = item.description;
+
+    itemText.appendChild(itemDescription);
+
+    menuDiv.appendChild(itemDiv);
+  })
+  
+  return menuDiv;
 }
+
+export { loadMenu };
