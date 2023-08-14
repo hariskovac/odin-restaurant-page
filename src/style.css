@@ -128,6 +128,33 @@ main {
   justify-content: center;
 }
 
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  padding: 15px;
+}
+
+.contact-container > img {
+  width: 800px;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=text], textarea {
+  width: 100%;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
 .item-container {
   flex-grow: 1;
   padding: 5px;
@@ -168,7 +195,7 @@ main {
   text-decoration: underline;
 }
 
-.button {
+.button, input[type=submit] {
   width: 30%;
   background-color: var(--color-red);
   color: white;
@@ -179,7 +206,11 @@ main {
   font-size: 3rem;
 }
 
-.button:hover {
+input[type=submit] {
+  font-size: 2rem;
+}
+
+.button:hover, input[type=submit]:hover {
   background-color: var(--color-red-hover);
   text-decoration: underline;
 }
